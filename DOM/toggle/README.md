@@ -1,0 +1,1 @@
+Tradução de Toggle: Alternar
