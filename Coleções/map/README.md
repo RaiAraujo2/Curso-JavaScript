@@ -1,4 +1,6 @@
 Map
+
+
 Map é uma coleção de pares chave-valor que mantém a ordem de inserção das chaves, permitindo qualquer tipo de dado como chave.
 
 Propriedades:
