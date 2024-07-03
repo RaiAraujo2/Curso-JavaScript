@@ -30,11 +30,21 @@ const gerenciarExibicaoCarros=()=>{
     carros.innerHTML = ""
     a_carros.forEach((c)=>{
         const div = document.createElement('div');
+        const btn = document.createElement("button");
+        btn.innerHTML = "Remover"
+        btn.setAttribute("class", "remover")
+        btn.addEventListener("click", (evt)=>{
+            const quemRemover = evt.target.parentNode.dataset.nome
+            removerCarro(quemRemover)
+            gerenciarExibicaoCarros()
+        })
         div.setAttribute('class', 'carro');
+        div.setAttribute("data-nome", c.nome)
         div.innerHTML= `Nome: ${c.nome} <br> Portas: ${c.portas} <br> `
         if(f_tipoMilitar.checked){
             div.innerHTML += `Blindagem: ${c.blindagem} <br> Municao: ${c.municao} <br>`
         }
+        div.appendChild(btn)
         carros.appendChild(div)
     })
 }
@@ -50,6 +60,11 @@ btn_addCarro.addEventListener('click', () => {
     gerenciarExibicaoCarros()
 });
 
+const removerCarro=(carro)=>{
+    a_carros = a_carros.filter((el)=>{
+        return el.nome!=carro
+    })
+}
 
 class Carro{
     constructor(nome, portas){
