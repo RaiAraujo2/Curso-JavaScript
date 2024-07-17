@@ -40,4 +40,14 @@ console.log(nome.valueOf())
 num = 10
 console.log(typeof(num.toString()))
 
+// Verifica se a string começa com a string passada
 console.log(nome.startsWith("Bruno"))
+
+// Verifica se a string contem a string passada
+console.log(nome.includes("Bruno"))
+
+console.log(nome.repeat(4))
+
+// reverte uma string
+// join: junta os elementos de um array
+console.log(nome.split("").reverse().join(""))
