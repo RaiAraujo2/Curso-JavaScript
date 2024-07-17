@@ -39,3 +39,5 @@ console.log(nome.valueOf())
 
 num = 10
 console.log(typeof(num.toString()))
+
+console.log(nome.startsWith("Bruno"))
