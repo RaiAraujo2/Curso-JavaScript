@@ -51,3 +51,4 @@ console.log(nome.repeat(4))
 // reverte uma string
 // join: junta os elementos de um array
 console.log(nome.split("").reverse().join(""))
+
